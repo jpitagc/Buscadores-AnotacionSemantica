@@ -11,7 +11,11 @@ public class Search {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        int total_results = Integer.parseInt(args[1]);
+        if (total_results < 1 || total_results > 100){
+            throw new Exception("Number of results has to be between 1 and 100.");
+        }
         System.out.println("Running search command...");
         GoogleSearch google = new GoogleSearch();
 
@@ -19,7 +23,7 @@ public class Search {
         if (!rs){System.out.println("Not started"); System.exit(-1);;}
 
         Vector<Instance> results = new Vector<Instance>();
-        int total_results = Integer.parseInt(args[1]);
+        
         int pending_results = Integer.parseInt(args[1]);
 
         for(int start = 1; start<= total_results; start+=10){
@@ -48,7 +52,7 @@ public class Search {
 
         for (int i = 0; i < results.size(); i++) {
             Instance indResult = results.get(i);
-            System.out.println(i + "- Url -> " + indResult.getId() +"\n Title -> "+ indResult.getLabel()+"\n Snippet -> "+ indResult.getDescription());
+            System.out.println((i+1) + "- Url -> " + indResult.getId() +"\n Title -> "+ indResult.getLabel()+"\n Snippet -> "+ indResult.getDescription());
           }
         rs = GoogleSearch.stopGoogle();
         
