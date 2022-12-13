@@ -12,18 +12,17 @@ public class Search {
 
 
     public static void main(String[] args) throws Exception {
+
         int total_results = Integer.parseInt(args[1]);
-        if (total_results < 1 || total_results > 100){
-            throw new Exception("Number of results has to be between 1 and 100.");
-        }
+        if (total_results < 1 || total_results > 100){throw new Exception("Number of results has to be between 1 and 100.");}
+
         System.out.println("Running search command...");
         GoogleSearch google = new GoogleSearch();
 
         boolean rs = GoogleSearch.startGoogle();
-        if (!rs){System.out.println("Not started"); System.exit(-1);;}
+        if (!rs){throw new Exception("Failed to start gogole.");}
 
         Vector<Instance> results = new Vector<Instance>();
-        
         int pending_results = Integer.parseInt(args[1]);
 
         for(int start = 1; start<= total_results; start+=10){
