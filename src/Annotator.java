@@ -11,6 +11,8 @@ import java.io.FileWriter;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Vector;
+import java.net.URL;
+
 
 public class Annotator {
     
@@ -49,28 +51,35 @@ public class Annotator {
 
                 System.out.println("Annotating: "+webPage);
                 outputFileWriter.write("<"+webPage+"> rdf:type "+defaultClass+"\n");
-                String fileContent = "";
-
+                
+                //String fileContent = "";
+                //byte[] fileBytes = Files.readAllBytes(Paths.get(webPage.replace("file:", "./src/tests/")));
+                //fileContent= new String(fileBytes);
                
-                byte[] fileBytes = Files.readAllBytes(Paths.get(webPage.replace("file:", "./src/tests/")));
-                fileContent= new String(fileBytes);
-               
+                URL webPageUrl = new URL(webPage);
 
-                List<Entity> entities = myGate.findEntities(fileContent);
-                Set<String> specificFoundLOcations = new HashSet<String>();
+                List<Entity> entities = myGate.findEntities(webPageUrl);
+                Set<String> namedLocations = new HashSet<String>();
+                Set<String> specificFoundLocations = new HashSet<String>();
 
                 for(Entity thisEntity : entities){
                     if(thisEntity.getType() == "Location"){
-                        String params = "&num=" + 1;
-                        Vector<Instance> results = google.doWikipediaSearch(thisEntity.getText(),params);
-                        if(results.size() > 0){
-                            specificFoundLOcations.add(results.get(0).getId());
-                            allFoundLocations.add(results.get(0).getId());
-                        }
-                        
+                        namedLocations.add(thisEntity.getText());
                     }
                 }
-                for(String foundURL : specificFoundLOcations) {
+
+                for(String location : namedLocations){
+                    String params = "&num=" + 1;
+                    Vector<Instance> results = google.doWikipediaSearch(location,params);
+                    if(results.size() > 0){
+                        specificFoundLocations.add(results.get(0).getId());
+                        allFoundLocations.add(results.get(0).getId());
+                    }
+                        
+                }
+                
+
+                for(String foundURL : specificFoundLocations) {
                     outputFileWriter.write("<"+webPage+"> <#mentionsInstance> "+ "<" +foundURL+ ">."+"\n");
                 }
             }
