@@ -1,0 +1,9 @@
+@base <urn:uc3m.es:miaa> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+<https://es.wikipedia.org/wiki/Pedro_Gonz%C3%A1lez-Trevijano> rdf:type <#webPage>
+<https://es.wikipedia.org/wiki/Pedro_Gonz%C3%A1lez-Trevijano> <#mentionsInstance> <https://en.wikipedia.org/wiki/Madrid>.
+<https://es.wikipedia.org/wiki/Pedro_Gonz%C3%A1lez-Trevijano> <#mentionsInstance> <https://en.wikipedia.org/wiki/Santiago>.
+<https://en.wikipedia.org/wiki/Madrid> a dcterms:Location.
+<https://en.wikipedia.org/wiki/Santiago> a dcterms:Location.
