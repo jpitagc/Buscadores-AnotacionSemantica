@@ -1,10 +1,14 @@
-<file:src/tests/tests/biden-inflation-reduction-act-signing.html> rdf:type <#webPage>
+@base <urn:uc3m.es:miaa> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+<file:src/tests/tests/biden-inflation-reduction-act-signing.html> rdf:type <#webPage>. 
 <file:src/tests/tests/biden-inflation-reduction-act-signing.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/United_States>.
 <file:src/tests/tests/biden-inflation-reduction-act-signing.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Calif>.
 <file:src/tests/tests/biden-inflation-reduction-act-signing.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Send>.
 <file:src/tests/tests/biden-inflation-reduction-act-signing.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/New_York_City>.
 <file:src/tests/tests/biden-inflation-reduction-act-signing.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Vermont>.
-<file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> rdf:type <#webPage>
+<file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> rdf:type <#webPage>. 
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/India>.
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/United_Kingdom>.
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Dzhankoi>.
@@ -20,7 +24,7 @@
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Kherson>.
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Australia>.
 <file:src/tests/tests/ukraine-kherson-russia-bridge-strikes-intl-CNN.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Ukraine>.
-<file:src/tests/tests/us-air-force-nuclear-capable-missile-CNNPolitics.html> rdf:type <#webPage>
+<file:src/tests/tests/us-air-force-nuclear-capable-missile-CNNPolitics.html> rdf:type <#webPage>. 
 <file:src/tests/tests/us-air-force-nuclear-capable-missile-CNNPolitics.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/India>.
 <file:src/tests/tests/us-air-force-nuclear-capable-missile-CNNPolitics.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/United_Kingdom>.
 <file:src/tests/tests/us-air-force-nuclear-capable-missile-CNNPolitics.html> <#mentionsInstance> <https://en.wikipedia.org/wiki/Marshall_Islands>.
