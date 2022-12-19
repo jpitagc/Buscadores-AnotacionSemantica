@@ -19,6 +19,6 @@
 <#named> a rdf:Property;
 		  rdfs:range xsd:string .
 
-<#PersonEntity> rdfs:subPropertyOf <#Entity> ; <#named> "Person"
-<#LocationEntity> rdfs:subPropertyOf <#Entity> ; <#named> "Location"
-<#OrganizationEntity> rdfs:subPropertyOf <#Entity> ; <#named> "Organization"
+<#PersonEntity> rdfs:subClassOf <#Entity> ; <#named> "Person"
+<#LocationEntity> rdfs:subClassOf <#Entity> ; <#named> "Location"
+<#OrganizationEntity> rdfs:subClassOf <#Entity> ; <#named> "Organization"
